@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransactDetailsModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="transactiondetails">
+    <Key>
+      <PropertyRef Name="TDetailNo" />
+    </Key>
+    <Property Name="TDetailNo" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Product_ID" Type="uint" Nullable="false" />
+    <Property Name="Prod_desc" Type="varchar" MaxLength="100" />
+    <Property Name="Price" Type="double" Nullable="false" />
+    <Property Name="Quantity" Type="double" Nullable="false" />
+    <Property Name="Discount" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TransactDetailsModelStoreContainer">
+    <EntitySet Name="transactiondetails" EntityType="Self.transactiondetails" Schema="management" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

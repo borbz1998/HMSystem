@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4874071-4D05-4951-88CA-8E439553ABC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grades</RootNamespace>
+    <AssemblyName>Grades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v15.1" />
+    <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.Pdf.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.1.Drawing, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mysqlbackup">
+      <HintPath>..\..\..\..\mysqlbackup\mysqlbackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm\AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddToCart.cs" />
+    <Compile Include="AdminForm\AdminButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\AdminButtons.Designer.cs">
+      <DependentUpon>AdminButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\ACCOUNT.Designer.cs">
+      <DependentUpon>ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\CustomerNotif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\CustomerNotif.Designer.cs">
+      <DependentUpon>CustomerNotif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\DayTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\DayTransaction.Designer.cs">
+      <DependentUpon>DayTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\AddRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\AddRooms.Designer.cs">
+      <DependentUpon>AddRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\AddSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\AddSection.Designer.cs">
+      <DependentUpon>AddSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\AddServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\AddServices.Designer.cs">
+      <DependentUpon>AddServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\AddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\AddTeacher.Designer.cs">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\AuditTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\AuditTrail.Designer.cs">
+      <DependentUpon>AuditTrail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\BackPagePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\BackPagePrint.Designer.cs">
+      <DependentUpon>BackPagePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\CashierMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\CashierMainform.Designer.cs">
+      <DependentUpon>CashierMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\CharacterFormation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\CharacterFormation.Designer.cs">
+      <DependentUpon>CharacterFormation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\PrintGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\PrintGrade.Designer.cs">
+      <DependentUpon>PrintGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New.cs" />
+    <Compile Include="CashierForm\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdminForm\BackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\BackupRestore.Designer.cs">
+      <DependentUpon>BackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\Quarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\Quarter.Designer.cs">
+      <DependentUpon>Quarter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\RoomTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\RoomTransaction.Designer.cs">
+      <DependentUpon>RoomTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\ServiceTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\ServiceTransaction.Designer.cs">
+      <DependentUpon>ServiceTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\Teacher.Designer.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\Teachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\Teachers.Designer.cs">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\ViewGradeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\ViewGradeAdmin.Designer.cs">
+      <DependentUpon>ViewGradeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G-Reference\ViewGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G-Reference\ViewGrades.Designer.cs">
+      <DependentUpon>ViewGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\POSFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\POSFORM.Designer.cs">
+      <DependentUpon>POSFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm\PRODUCTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm\PRODUCTS.Designer.cs">
+      <DependentUpon>PRODUCTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SMS.cs" />
+    <Compile Include="CashierForm\WAIVER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\WAIVER.Designer.cs">
+      <DependentUpon>WAIVER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm\XtraForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm\XtraForm2.Designer.cs">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\AdminButtons.resx">
+      <DependentUpon>AdminButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\ACCOUNT.resx">
+      <DependentUpon>ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\CustomerNotif.resx">
+      <DependentUpon>CustomerNotif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\DayTransaction.resx">
+      <DependentUpon>DayTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\AddRooms.resx">
+      <DependentUpon>AddRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\AddSection.resx">
+      <DependentUpon>AddSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\AddServices.resx">
+      <DependentUpon>AddServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\AddTeacher.resx">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\AuditTrail.resx">
+      <DependentUpon>AuditTrail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\BackPagePrint.resx">
+      <DependentUpon>BackPagePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\CashierMainform.resx">
+      <DependentUpon>CashierMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\CharacterFormation.resx">
+      <DependentUpon>CharacterFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReceipt.rdlc" />
+    <EmbeddedResource Include="G-Reference\PrintGrade.resx">
+      <DependentUpon>PrintGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\BackupRestore.resx">
+      <DependentUpon>BackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\Quarter.resx">
+      <DependentUpon>Quarter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\RoomTransaction.resx">
+      <DependentUpon>RoomTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\ServiceTransaction.resx">
+      <DependentUpon>ServiceTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\Teachers.resx">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\ViewGradeAdmin.resx">
+      <DependentUpon>ViewGradeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G-Reference\ViewGrades.resx">
+      <DependentUpon>ViewGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\POSFORM.resx">
+      <DependentUpon>POSFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm\PRODUCTS.resx">
+      <DependentUpon>PRODUCTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\WAIVER.resx">
+      <DependentUpon>WAIVER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm\XtraForm2.resx">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\New.datasource" />
+    <None Include="Properties\DataSources\XtraForm1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10tb-dogsperm01-superJumbo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20311lpr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Common-dog-behaviors-explained.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot-2015-01-17-16.15.29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shake-shiver-and-tremble-Why-dogs-do-it.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10317275.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20134684_1838777316135922_1600677445_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_email-envelope_531888.png" />
+    <None Include="Resources\if_email-envelope_531888.ico" />
+    <None Include="Resources\if_exit_7989.png" />
+    <None Include="Resources\if_shopping_cart_40840.png" />
+    <None Include="Resources\if_custom-reports_63120.png" />
+    <None Include="Resources\if_pet-cage_307360.png" />
+    <None Include="Resources\if_BT_cut_905651.png" />
+    <None Include="Resources\if_electronic_billing_machine_44639.png" />
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitbull_heart_large_cb595b1f-56dc-4857-9340-743a208e2c6d_grande.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20f4854.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_2_67715.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_calculator_103862.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_calculator_1038621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_remove-sign_173082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20134684_1838777316135922_1600677445_n1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20311lpr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_back_126585.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Download_1031520.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Streamline-70_185090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_update_172618.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20134684_1838777316135922_1600677445_n2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22054449_1928746317139021_1340137210_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maltese_rbayli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22016626_1928755763804743_1178057879_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dogs-scoot-for-a-variety-of-reasons.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21984285_1928746473805672_451228007_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog-yoga-mat.jpg.838x0_q80.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22054449_1928746317139021_1340137210_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog-yoga-mat.jpg.838x0_q801.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21984285_1928746473805672_451228007_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dogs-scoot-for-a-variety-of-reasons1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22016626_1928755763804743_1178057879_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maltese_rbayli1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22016626_1928755763804743_1178057879_n2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maltese_rbayli2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_19_330401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_19_3304011.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

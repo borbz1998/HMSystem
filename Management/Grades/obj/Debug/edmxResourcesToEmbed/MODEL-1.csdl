@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TransactDetailsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="transactiondetail">
+    <Key>
+      <PropertyRef Name="TDetailNo" />
+    </Key>
+    <Property Name="TDetailNo" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Product_ID" Type="Int64" Nullable="false" />
+    <Property Name="Prod_desc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Quantity" Type="Double" Nullable="false" />
+    <Property Name="Discount" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MANAGEMENT_ENTITIES" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="transactiondetails" EntityType="Self.transactiondetail" />
+  </EntityContainer>
+</Schema>

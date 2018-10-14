@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOTEL MANAGEMENT SYSTEM", "Grades\HOTEL MANAGEMENT SYSTEM.csproj", "{B4874071-4D05-4951-88CA-8E439553ABC5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Hotel_Management_System_Setup", "Hotel_Management_System_Setup\Hotel_Management_System_Setup.vdproj", "{D45A2933-3C01-4D3A-B3BB-6C0F287089B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4874071-4D05-4951-88CA-8E439553ABC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4874071-4D05-4951-88CA-8E439553ABC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4874071-4D05-4951-88CA-8E439553ABC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4874071-4D05-4951-88CA-8E439553ABC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45A2933-3C01-4D3A-B3BB-6C0F287089B0}.Debug|Any CPU.ActiveCfg = Debug
+		{D45A2933-3C01-4D3A-B3BB-6C0F287089B0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

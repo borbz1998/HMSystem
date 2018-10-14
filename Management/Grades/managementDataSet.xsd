@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="managementDataSet" targetNamespace="http://tempuri.org/managementDataSet.xsd" xmlns:mstns="http://tempuri.org/managementDataSet.xsd" xmlns="http://tempuri.org/managementDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="managementConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="managementConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Grades.Properties.Settings.GlobalReference.Default.managementConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="transactiondetailsTableAdapter" GeneratorDataComponentClassName="transactiondetailsTableAdapter" Name="transactiondetails" UserDataComponentName="transactiondetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="managementConnectionString (Settings)" DbObjectName="management.transactiondetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `TDetailNo`, `InvoiceNo`, `Product_ID`, `Prod_desc`, `Price`, `Quantity`, `Discount` FROM `transactiondetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="managementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="managementDataSet" msprop:Generator_UserDSName="managementDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transactiondetails" msprop:Generator_TableClassName="transactiondetailsDataTable" msprop:Generator_TableVarName="tabletransactiondetails" msprop:Generator_TablePropName="transactiondetails" msprop:Generator_RowDeletingName="transactiondetailsRowDeleting" msprop:Generator_RowChangingName="transactiondetailsRowChanging" msprop:Generator_RowEvHandlerName="transactiondetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="transactiondetailsRowDeleted" msprop:Generator_UserTableName="transactiondetails" msprop:Generator_RowChangedName="transactiondetailsRowChanged" msprop:Generator_RowEvArgName="transactiondetailsRowChangeEvent" msprop:Generator_RowClassName="transactiondetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
